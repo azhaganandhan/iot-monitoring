@@ -16,7 +16,7 @@ const API = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api";
 const tabs = ["Overview", "Water", "Soil", "Energy", "Devices"] as const;
 type Tab = (typeof tabs)[number];
 const n = (value: number | null | undefined, digits = 1) => value == null ? "--" : value.toFixed(digits);
-const istDay = (timestamp: string) => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date(timestamp));
+const istDay = (timestamp: string | Date) => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date(timestamp));
 
 function dailySeries(rows: Reading[]) {
   const values = rows.filter((row) => row.water_total != null).toSorted((a, b) => a.timestamp_utc.localeCompare(b.timestamp_utc));
