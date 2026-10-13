@@ -12,7 +12,7 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarEleme
 
 type Device = { device_id: string; name: string | null; device_type: string | null; last_seen_at: string | null };
 type Reading = { id: number; device_id: string; timestamp: string; timestamp_utc: string; water_total: number | null; moisture: number | null; temperature: number | null; payload: Record<string, unknown> | null };
-const API = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "http://95.217.220.40:8000/api";
 const tabs = ["Overview", "Water", "Soil", "Energy", "Devices"] as const;
 type Tab = (typeof tabs)[number];
 const n = (value: number | null | undefined, digits = 1) => value == null ? "--" : value.toFixed(digits);

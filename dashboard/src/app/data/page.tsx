@@ -19,7 +19,7 @@ type Reading = {
   payload: Record<string, unknown> | null;
 };
 
-const API = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api";
+const API = process.env.NEXT_PUBLIC_API_URL ?? "http://95.217.220.40:8000/api";
 const PAGE_SIZE_OPTIONS = [25, 50, 100];
 const istDate = (timestamp: string) => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata" }).format(new Date(timestamp));
 function csvCell(value: unknown) {
