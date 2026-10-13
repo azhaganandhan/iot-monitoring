@@ -22,19 +22,26 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    ports:
-      - "8000:8000"
 
   dashboard:
     build:
       context: ./dashboard
       args:
-        NEXT_PUBLIC_API_URL: ${PUBLIC_API_URL:-http://localhost:8000/api}
+        NEXT_PUBLIC_API_URL: /api
     restart: unless-stopped
     depends_on:
       - api
+
+  proxy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - api
+      - dashboard
     ports:
-      - "3000:3000"
+      - "80:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
 
 volumes:
   pgdata:
