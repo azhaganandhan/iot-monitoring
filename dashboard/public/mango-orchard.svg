@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" role="img" aria-label="Mango orchard with drip irrigation">
+  <style>
+    .sway { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 4s ease-in-out infinite; }
+    .d2 { animation-delay: -1.3s; }
+    .d3 { animation-delay: -2.6s; }
+    .drop { animation: drip 1.6s ease-in infinite; }
+    .drop.b { animation-delay: -.5s; }
+    .drop.c { animation-delay: -1s; }
+    .sun { transform-box: fill-box; transform-origin: 50% 50%; animation: pulse 3s ease-in-out infinite; }
+    .cloud { animation: drift 14s linear infinite alternate; }
+    @keyframes sway { 0%, 100% { transform: rotate(-1.8deg); } 50% { transform: rotate(1.8deg); } }
+    @keyframes drip { 0% { transform: translateY(-6px); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateY(18px); opacity: 0; } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+    @keyframes drift { from { transform: translateX(-20px); } to { transform: translateX(40px); } }
+  </style>
+  <rect width="400" height="160" fill="#dcebf5"/>
+  <circle class="sun" cx="340" cy="34" r="16" fill="#f6d365"/>
+  <g class="cloud" fill="#fff" opacity=".85"><ellipse cx="120" cy="26" rx="26" ry="9"/><ellipse cx="138" cy="21" rx="16" ry="8"/></g>
+  <rect y="108" width="400" height="52" fill="#7fa863"/>
+  <rect y="124" width="400" height="36" fill="#6b9455"/>
+  <g class="sway">
+    <rect x="62" y="76" width="8" height="46" fill="#7a5a3a"/>
+    <circle cx="66" cy="62" r="34" fill="#3f7d3a"/>
+    <circle cx="48" cy="72" r="20" fill="#4a8c43"/>
+    <circle cx="84" cy="72" r="20" fill="#4a8c43"/>
+    <ellipse cx="56" cy="76" rx="6" ry="8" fill="#f0a830"/>
+    <ellipse cx="78" cy="68" rx="6" ry="8" fill="#e8892b"/>
+    <ellipse cx="68" cy="88" rx="6" ry="8" fill="#f0a830"/>
+  </g>
+  <g class="sway d2">
+    <rect x="196" y="76" width="8" height="46" fill="#7a5a3a"/>
+    <circle cx="200" cy="62" r="34" fill="#3f7d3a"/>
+    <circle cx="182" cy="72" r="20" fill="#4a8c43"/>
+    <circle cx="218" cy="72" r="20" fill="#4a8c43"/>
+    <ellipse cx="190" cy="76" rx="6" ry="8" fill="#e8892b"/>
+    <ellipse cx="212" cy="68" rx="6" ry="8" fill="#f0a830"/>
+    <ellipse cx="202" cy="88" rx="6" ry="8" fill="#e8892b"/>
+  </g>
+  <g class="sway d3">
+    <rect x="326" y="76" width="8" height="46" fill="#7a5a3a"/>
+    <circle cx="330" cy="62" r="34" fill="#3f7d3a"/>
+    <circle cx="312" cy="72" r="20" fill="#4a8c43"/>
+    <circle cx="348" cy="72" r="20" fill="#4a8c43"/>
+    <ellipse cx="320" cy="76" rx="6" ry="8" fill="#f0a830"/>
+    <ellipse cx="342" cy="68" rx="6" ry="8" fill="#e8892b"/>
+  </g>
+  <line x1="0" y1="132" x2="400" y2="132" stroke="#1f2937" stroke-width="3"/>
+  <g fill="#2563eb">
+    <path class="drop" d="M66 134 q-4 7 0 10 q4 -3 0 -10z"/>
+    <path class="drop b" d="M200 134 q-4 7 0 10 q4 -3 0 -10z"/>
+    <path class="drop c" d="M330 134 q-4 7 0 10 q4 -3 0 -10z"/>
+  </g>
+</svg>

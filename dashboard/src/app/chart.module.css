@@ -1,0 +1,27 @@
+.chart {
+  margin-top: 22px;
+  padding: 12px 14px;
+  border: 1px solid #e6eaf0;
+  background: #fff;
+  color: #344054;
+}
+
+.plot {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.empty {
+  display: grid;
+  min-height: 174px;
+  place-items: center;
+  color: #667085;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .plot {
+    height: 190px;
+  }
+}

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160" role="img" aria-label="Overhead water tank on a stand">
+  <style>
+    .wave { animation: wave 2.4s linear infinite; }
+    .level { transform-box: fill-box; transform-origin: 50% 100%; animation: level 5s ease-in-out infinite; }
+    .flow { stroke-dasharray: 6 6; animation: flow .8s linear infinite; }
+    .drop { animation: fall 1.2s ease-in infinite; }
+    .cloud { animation: drift 14s linear infinite alternate; }
+    @keyframes wave { from { transform: translateX(0); } to { transform: translateX(-28px); } }
+    @keyframes level { 0%, 100% { transform: scaleY(.75); } 50% { transform: scaleY(1); } }
+    @keyframes flow { to { stroke-dashoffset: -12; } }
+    @keyframes fall { 0% { transform: translateY(-6px); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
+    @keyframes drift { from { transform: translateX(-20px); } to { transform: translateX(40px); } }
+  </style>
+  <defs><clipPath id="tank"><rect x="140" y="56" width="120" height="26" rx="6"/></clipPath></defs>
+  <rect width="400" height="160" fill="#dcebf5"/>
+  <g class="cloud" fill="#fff" opacity=".85"><ellipse cx="80" cy="28" rx="26" ry="9"/><ellipse cx="98" cy="23" rx="16" ry="8"/></g>
+  <rect y="132" width="400" height="28" fill="#7fa863"/>
+  <g stroke="#4b5563" stroke-width="6">
+    <line x1="150" y1="92" x2="140" y2="132"/>
+    <line x1="250" y1="92" x2="260" y2="132"/>
+    <line x1="200" y1="92" x2="200" y2="132"/>
+    <line x1="146" y1="112" x2="254" y2="112" stroke-width="4"/>
+  </g>
+  <rect x="130" y="34" width="140" height="58" rx="10" fill="#2563eb"/>
+  <rect x="130" y="34" width="140" height="14" rx="7" fill="#1d4ed8"/>
+  <rect x="140" y="56" width="120" height="26" rx="6" fill="#bfdbfe"/>
+  <g clip-path="url(#tank)">
+    <g class="level"><rect x="140" y="56" width="120" height="26" fill="#60a5fa"/></g>
+    <path class="wave" d="M130 68 q14 -8 28 0 t28 0 t28 0 t28 0 t28 0 t28 0" fill="none" stroke="#dbeafe" stroke-width="3"/>
+  </g>
+  <rect x="193" y="24" width="14" height="10" fill="#1d4ed8"/>
+  <path d="M270 80 h28 v52" fill="none" stroke="#4b5563" stroke-width="6" opacity=".35"/>
+  <path class="flow" d="M270 80 h28 v52" fill="none" stroke="#60a5fa" stroke-width="4"/>
+  <path class="drop" d="M298 134 q-5 8 0 12 q5 -4 0 -12z" fill="#2563eb"/>
+</svg>
